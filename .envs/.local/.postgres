@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=time_spent_map
+POSTGRES_USER=bijTxEdgWlQvcHKenBiujQBjJkkyvLZj
+POSTGRES_PASSWORD=kZzWUNE0EwKJuD4oXr4s40R1ltEieVI3n3YyiwCSoeD4iq7k8ZmBv7EDyP16koxf
