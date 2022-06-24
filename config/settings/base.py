@@ -9,6 +9,7 @@ ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # time_spent_map/
 APPS_DIR = ROOT_DIR / "time_spent_map"
 env = environ.Env()
+env.escape_proxy = True
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
 if READ_DOT_ENV_FILE:
@@ -44,10 +45,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "time_spent_map",
-        "USER": env.db("POSTGRES_USER"),
-        "PASSWORD": env.db("POSTGRES_PASSWORD"),
-        "HOST": env.db("POSTGRES_HOST"),
-        "PORT": env.db("POSTGRES_PORT"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRES_PASSWORD"),
+        "HOST": env("POSTGRES_HOST"),
+        "PORT": env("POSTGRES_PORT"),
     }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
