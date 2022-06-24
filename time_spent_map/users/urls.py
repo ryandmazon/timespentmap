@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 
 from time_spent_map.users.views import (
     user_detail_view,
@@ -11,4 +11,5 @@ urlpatterns = [
     path("~redirect/", view=user_redirect_view, name="redirect"),
     path("~update/", view=user_update_view, name="update"),
     path("<str:username>/", view=user_detail_view, name="detail"),
+    path("api/", include("api.urls")),
 ]
